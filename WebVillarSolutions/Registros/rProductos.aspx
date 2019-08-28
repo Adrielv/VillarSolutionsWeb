@@ -2,16 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <div class="pageContent">
+ <div class="content">
             <div id="Datos">
+                  <asp:Button ID="buscarButton" runat="server" Text="BUSCAR" class="btn btn-dark btn-lg text-center my-3 float-right" onclick="buscarButton_Click" />
+              <br />
                 <asp:Label ID="Label1" runat="server" Text="ProductoId"></asp:Label>
                 <asp:TextBox class="form-control" ID="id" runat="server" type="number" min="0" onkeypress="return isNumberKey(event)"></asp:TextBox>
 
-                <asp:Button ID="buscarButton" runat="server" Text="BUSCAR" class="btn btn-dark btn-lg text-center my-3" onclick="buscarButton_Click" />
-
+          
                
                 <asp:Label ID="Label2" runat="server" Text="Descripcion"></asp:Label>
-                <asp:TextBox class="form-control" ID="descripcion" runat="server" placeholder="Nombre del producto..."></asp:TextBox>
+                <asp:TextBox class="form-control" ID="descripcion" runat="server" placeholder="Nombre"></asp:TextBox>
 
                 <asp:Label ID="Label3" runat="server" Text="Cantidad"></asp:Label>
                 <asp:TextBox class="form-control" ID="cantidad" runat="server" ReadOnly="true"></asp:TextBox>
@@ -31,9 +32,9 @@
 
                 
               
-                <asp:Button ID="nuevoButton" runat="server" Text="NUEVO" class="btn btn-primary btn-lg text-center my-3" OnClick="nuevoButton_Click"/>
-                <asp:Button ID="guardarButton" runat="server" Text="GUARDAR" class="btn btn-success btn-lg text-center mb-3" OnClick="guardarButton_Click"/>
-                <asp:Button ID="eliminarButton" runat="server" Text="ELIMINAR" class="btn btn-danger btn-lg text-center" OnClick="eliminarButton_Click"/>
+                <asp:Button ID="nuevoButton" runat="server" Text="NUEVO" class="btn btn-dark btn-lg text-center my-3" OnClick="nuevoButton_Click"/>
+                <asp:Button ID="guardarButton" runat="server" Text="GUARDAR" class="btn btn-dark btn-lg text-center my-3" OnClick="guardarButton_Click"/>
+                <asp:Button ID="eliminarButton" runat="server" Text="ELIMINAR" class="btn btn-dark btn-lg text-center my-3" OnClick="eliminarButton_Click"/>
                 </div>
 
     </div>

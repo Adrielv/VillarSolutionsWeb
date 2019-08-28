@@ -6,41 +6,40 @@
 <head runat="server">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-      <script type='text/javascript'>
-                function Exito() {
-                    $('#Mensaje').modal('show');
-                }
-                function SinExito() {
-                    $('#Mensaje2').modal('show');
-                }
-                function Validacion() {
-                    $('#Validar').modal('show');
-                }
-                function Repeticion() {
-                    $('#Repetir').modal('show');
-                }
-                function isNumberKey(evt) {
-                     var charCode = (evt.which) ? evt.which : event.keyCode
-                     if (charCode > 31 && (charCode < 48 || charCode > 57))
-                         return false;
+     <script type='text/javascript'>
+         function Exito() {
+             $('#Mensaje').modal('show');
+         }
+         function SinExito() {
+             $('#Mensaje2').modal('show');
+         }
+         function Validacion() {
+             $('#Validar').modal('show');
+         }
+         function Repeticion() {
+             $('#Repetir').modal('show');
+         }
+         function isNumberKey(evt) {
+             var charCode = (evt.which) ? evt.which : event.keyCode
+             if (charCode > 31 && (charCode < 48 || charCode > 57))
+                 return false;
 
-                     return true;
-                }
-                function isLetterKey(evt) {
-                     var charCode = (evt.which) ? evt.which : event.keyCode
-                     if (charCode > 31 && (charCode < 48 || charCode > 57))
-                         return true;
+             return true;
+         }
+         function isLetterKey(evt) {
+             var charCode = (evt.which) ? evt.which : event.keyCode
+             if (charCode > 31 && (charCode < 48 || charCode > 57))
+                 return true;
 
-                     return false;
-        }
+             return false;
+         }
 </script>
-
 
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-      <style>
+    <style>
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -53,66 +52,82 @@ body {
 
 /* Style the top navigation bar */
 .topnav {
-  /*overflow: hidden;*/
   background-color: #000;
-   text-align: center;
+   text-align: left;
   color: #ffd800;
   height: 20%;
 }
 
-/* Style the topnav links 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}*/
 
 /* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: #000000;
 }
 
 /* Style the content */
 .content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+  background-image:url(/imagenes/mue.jpg);
+  background-repeat: repeat;
+  background-size: 500px 450px;
+	float: right;
+	clear: none;
+	min-height: 550px;
+	width: 100%;
+    height:100%;
+	padding: 65px;
+
+}
+.page{
+	display:compact;
+	width: 100%;
+	min-height: 50%;
+	overflow:no-display;
+	margin: 0px auto 0px auto;
+	box-sizing: border-box;
+	}
+
+
+#Datos {
+  background-color: #808080;
+   opacity:5;
+   filter:alpha(opacity=60); /* IE < 9.0 */
+  padding: 20px;
+  width:30%;
+ height:100%;
+ margin:auto;
+cursor: pointer;
+	color: #3d3737;
 }
 
 /* Style the footer */
-.footer {
-  background-color: #000;
+
+.footer{
+    background-color: #000;
     text-align: center;
     width: 100%;
     clear: none;
     padding: .5em 0;
     height: 20px;  
     margin-bottom: 200px;
-       color: #ff0000;
+       color: #000;
 }
 </style>
-
 </head>
+
+
 <body>
-
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <form id="form1" runat="server">
 
-  <div class="modal fade" id="Mensaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal fade" id="Mensaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
       <!--Header-->
       <div class="modal-body">
-                          <p style="color:#4800ff;text-align:center; font-size:larger">Muebleria Mena</p>
+                          <p style="color:#ffd800;text-align:center; font-size:larger">CAR DEALER SAN FRANCISCO</p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -134,7 +149,7 @@ body {
                      <div class="modal-content">
       <!--Header-->
       <div class="modal-body">
-                          <p style="color:#0026ff;text-align:center; font-size:larger">Muebleria Mena</p>
+                          <p style="color:#0026ff;text-align:center; font-size:larger">CAR DEALER SAN FRANCISCO</p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -209,28 +224,15 @@ body {
   </div>
 </div>
       
+        
+         
+       
 
-        <div class ="page">
-                <div class="pageHeader">
-            <img src="http://i.picasion.com/pic89/9f444366210454e5a1abc1b65bb7b2a5.gif" alt="Muebleria Mena" height="50" style="vertical-align:central; width: 100%; margin-left:px"/></div>
-
-       <div class="topnav">
-   <p style="color:#ffd800;text-align:center; font-size:larger"> Muebleria Mena </p>
-</div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
-     <div class="footer">
-         <address>
-            <strong>
-            Calle Caonabo.<br />
-            Tel. 829-352-4934<br />
-            Sfm, Rep. Dom.<br />
-            </strong>
-            </address>
+ 
 
-</div>
-</div>
 </form>
 </body>
 </html>

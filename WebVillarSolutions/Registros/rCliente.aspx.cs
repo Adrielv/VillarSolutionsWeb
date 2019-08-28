@@ -28,7 +28,7 @@ namespace WebVillarSolutions.Registros
             id.Text = Convert.ToString(cliente.ClienteId);
             nombres.Text = cliente.Nombres;
             cedula.Text = cliente.Cedula;
-            tlf.Text = cliente.Telefono;
+            telefono.Text = cliente.Telefono;
             direccion.Text = cliente.Direccion;
             fecha.Text = cliente.FechaCreacion.ToString("yyyy-MM-dd");
         }
@@ -57,7 +57,7 @@ namespace WebVillarSolutions.Registros
             c.ClienteId = idx;
             c.Nombres = nombres.Text;
             c.Cedula = cedula.Text;
-            c.Telefono = tlf.Text;
+            c.Telefono = telefono.Text;
             c.Direccion = direccion.Text;
             c.FechaCreacion = Convert.ToDateTime(fecha.Text);
 
@@ -69,14 +69,14 @@ namespace WebVillarSolutions.Registros
             id.Text = "0";
             nombres.Text = string.Empty;
             cedula.Text = string.Empty;
-            tlf.Text = string.Empty;
+            telefono.Text = string.Empty;
             direccion.Text = string.Empty;
         }
         private bool Validar()
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(cedula.Text) || string.IsNullOrWhiteSpace(tlf.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(fecha.Text))
+            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(cedula.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(fecha.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                 paso = false;
@@ -141,7 +141,7 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (RepetirNombre(nombres.Text) || RepetirCedula(cedula.Text) || RepetirTelefono(tlf.Text))
+            if (RepetirNombre(nombres.Text) || RepetirCedula(cedula.Text) || RepetirTelefono(telefono.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Repeticion()", true);
                 paso = false;
