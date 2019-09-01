@@ -11,7 +11,7 @@
         <asp:TextBox class="form-control" ID="id" runat="server" type="number" min="0" onkeypress="return isNumberKey(event)"></asp:TextBox>
         
         <asp:Label ID="Label2" runat="server" Text="Nombres"></asp:Label>
-        <asp:TextBox class="form-control" ID="nombres" placeholder="Nombres" runat="server" onkeypress="return isLetterKey(event)"></asp:TextBox>
+        <asp:TextBox class="form-control" ID="nombres"  runat="server" onkeypress="return isLetterKey(event)"></asp:TextBox>
 
         <asp:Label ID="Label3" runat="server" Text="Cedula"></asp:Label>
         <asp:TextBox class="form-control" ID="cedula" pattern="^\d{3}-\d{7}-\d{1}$" placeholder="123-1234567-1" runat="server" ></asp:TextBox>
@@ -20,7 +20,7 @@
         <asp:TextBox class="form-control" ID="telefono" pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" placeholder="123-123-1234" runat="server"></asp:TextBox>
 
         <asp:Label ID="Label5" runat="server" Text="Direccion"></asp:Label>
-        <asp:TextBox class="form-control" ID="direccion" placeholder="Direccion" runat="server"></asp:TextBox>
+        <asp:TextBox class="form-control" ID="direccion"  runat="server"></asp:TextBox>
 
         <asp:Label ID="Label7" runat="server" Text="Fecha"></asp:Label>
         <asp:TextBox class="form-control" ID="fecha" type="date" runat="server" ></asp:TextBox>

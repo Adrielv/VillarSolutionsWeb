@@ -12,16 +12,16 @@
 
                  
                 <asp:Label ID="Label2" runat="server" Text="Nombres"></asp:Label>
-                <asp:TextBox class="form-control" ID="nombres" placeholder="Nombre" runat="server"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="nombres"  runat="server"></asp:TextBox>
               
                  <asp:Label ID="Label3" runat="server" Text="Direccion"></asp:Label>
-                 <asp:TextBox class="form-control" ID="direccion" placeholder="Direccion" runat="server"></asp:TextBox>
+                 <asp:TextBox class="form-control" ID="direccion"  runat="server"></asp:TextBox>
 
                  <asp:Label ID="Label4" runat="server" Text="Telefono"></asp:Label>
                  <asp:TextBox class="form-control" ID="telefono" pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" placeholder="123-123-1234" runat="server"></asp:TextBox>
 
                 <asp:Label ID="Label5" runat="server" Text="Email"></asp:Label>
-                <asp:TextBox class="form-control" ID="email" placeholder="ejemplo@email.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{1,5})$" runat="server"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="email"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{1,5})$" runat="server"></asp:TextBox>
 
                 <asp:Label ID="Label6" runat="server" Text="Fecha"></asp:Label>
                 <asp:TextBox class="form-control" ID="fecha" type="date" runat="server" ></asp:TextBox>

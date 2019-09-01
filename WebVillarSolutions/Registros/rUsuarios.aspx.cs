@@ -14,23 +14,23 @@ namespace WebVillarSolutions.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            fecha.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            FechaTextBox.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
         private void LlenaCampo(Usuarios usuarios)
         {
-            id.Text = Convert.ToString(usuarios.UsuarioId);
-            nombres.Text = usuarios.Nombres;
-            usuario.Text = usuarios.Usuario;
-            clave.Text = usuarios.Clave;
-            confirmar.Text = usuarios.Clave;
-            email.Text = usuarios.Email;
-            fecha.Text = Convert.ToString(usuarios.FechaCreacion);
+            UsuarioIdTextBox.Text = Convert.ToString(usuarios.UsuarioId);
+            NombresTextBox.Text = usuarios.Nombres;
+            UsuarioTextBox.Text = usuarios.Usuario;
+            ClaveTextBox.Text = usuarios.Clave;
+            ConfirmarTextBox.Text = usuarios.Clave;
+            EmailTextBox.Text = usuarios.Email;
+            FechaTextBox.Text = Convert.ToString(usuarios.FechaCreacion);
         }
 
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
-            Usuarios usuarios = Repositorio.Buscar(Convert.ToInt32(id.Text));
+            Usuarios usuarios = Repositorio.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
             return (usuarios != null);
         }
 
@@ -38,9 +38,9 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(usuario.Text) || string.IsNullOrWhiteSpace(clave.Text) || string.IsNullOrWhiteSpace(email.Text) || confirmar.Text != clave.Text)
+            if ( string.IsNullOrWhiteSpace(NombresTextBox.Text) || string.IsNullOrWhiteSpace(UsuarioTextBox.Text) || string.IsNullOrWhiteSpace(ClaveTextBox.Text) || string.IsNullOrWhiteSpace(EmailTextBox.Text) || ConfirmarTextBox.Text != ClaveTextBox.Text)
             {
-                //  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
+                  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                 paso = false;
             }
             return paso;
@@ -48,12 +48,12 @@ namespace WebVillarSolutions.Registros
 
         private void Limpiar()
         {
-            id.Text = "0";
-            nombres.Text = string.Empty;
-            usuario.Text = string.Empty;
-            clave.Text = string.Empty;
-            confirmar.Text = string.Empty;
-            email.Text = string.Empty;
+            UsuarioIdTextBox.Text = "0";
+            NombresTextBox.Text = string.Empty;
+            UsuarioTextBox.Text = string.Empty;
+            ClaveTextBox.Text = string.Empty;
+            ConfirmarTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
         }
         public static bool RepetirUser(string descripcion)
         {
@@ -95,14 +95,14 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (RepetirUser(usuario.Text))
+            if (RepetirUser(UsuarioTextBox.Text))
             {
-                //   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Repeticion()", true);
+                   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Repeticion()", true);
                 paso = false;
             }
-            if (RepetirEmail(email.Text))
+            if (RepetirEmail(EmailTextBox.Text))
             {
-                //  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Repeticion()", true);
+                  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Repeticion()", true);
                 paso = false;
             }
             return paso;
@@ -110,13 +110,13 @@ namespace WebVillarSolutions.Registros
         private Usuarios LlenaClase()
         {
             Usuarios usuarios = new Usuarios();
-            int.TryParse(id.Text, out int idx);
+            int.TryParse(UsuarioIdTextBox.Text, out int idx);
             usuarios.UsuarioId = idx;
-            usuarios.Nombres = nombres.Text;
-            usuarios.Usuario = usuario.Text;
-            usuarios.Clave = clave.Text;
-            usuarios.Email = email.Text;
-            usuarios.FechaCreacion = Convert.ToDateTime(fecha.Text);
+            usuarios.Nombres = NombresTextBox.Text;
+            usuarios.Usuario = UsuarioTextBox.Text;
+            usuarios.Clave = ClaveTextBox.Text;
+            usuarios.Email = EmailTextBox.Text;
+            usuarios.FechaCreacion = Convert.ToDateTime(FechaTextBox.Text);
 
             return usuarios;
         }
@@ -134,7 +134,7 @@ namespace WebVillarSolutions.Registros
                 return;
 
             usuarios = LlenaClase();
-            int.TryParse(id.Text, out int idx);
+            int.TryParse(UsuarioIdTextBox.Text, out int idx);
             if (idx == 0)
             {
                 if (!ValidarRepetir())
@@ -148,7 +148,7 @@ namespace WebVillarSolutions.Registros
                 if (!ExisteEnLaBaseDeDatos())
                 {
 
-                    //     ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
+                       ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                     return;
                 }
                 paso = Repositorio.Modificar(usuarios);
@@ -157,12 +157,12 @@ namespace WebVillarSolutions.Registros
 
             if (paso)
             {
-                //   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Exito()", true);
+                   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Exito()", true);
                 return;
             }
             else
-                //    ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
-                ;
+                  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
+                
 
         }
 
@@ -170,23 +170,23 @@ namespace WebVillarSolutions.Registros
         {
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
             int idx;
-            int.TryParse(id.Text, out idx);
+            int.TryParse(UsuarioIdTextBox.Text, out idx);
 
             var usuario = Repositorio.Buscar(idx);
             if (usuario != null)
             {
                 if (Repositorio.Eliminar(idx))
                 {
-                    //     ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Exito()", true);
+                        ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Exito()", true);
                     Limpiar();
                 }
                 else
-                    //    ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
-                    ;
+                      ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
+                    
             }
             else
-                //  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
-                ;
+                  ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
+                
         }
 
         protected void nuevoButton_Click(object sender, EventArgs e)
@@ -198,14 +198,16 @@ namespace WebVillarSolutions.Registros
         {
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
             Usuarios usuarios = new Usuarios();
-            int.TryParse(id.Text, out int idx);
+            int.TryParse(UsuarioIdTextBox.Text, out int idx);
 
             usuarios = Repositorio.Buscar(idx);
             if (usuarios != null)
                 LlenaCampo(usuarios);
             else
-                //   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
-                ;
+                   ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
+                
         }
+
+    
     }
 }

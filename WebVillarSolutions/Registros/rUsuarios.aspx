@@ -2,39 +2,105 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+           
+ <br>
+    <div class="form-row justify-content-center">
+        <aside class="col-sm-8">
+            <div class="card">
+                <div class="card-header text-uppercase text-center text-info"> Registro Usuario</div>
+                <article class="card-body">
+                    <form>
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label1" runat="server" class="text-info" Text="UsuarioId"></asp:Label>
+                                    <asp:Button class="btn btn-info" ID="BuscarButton" runat="server" Text="Buscar" OnClick="buscarButton_Click" />
+                                    <asp:TextBox class="form-control" type="number" ID="UsuarioIdTextBox" Text="0" runat="server" ValidationGroup="Guardar"></asp:TextBox>
+                                   <asp:RequiredFieldValidator ID="usuarioIdRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="usuarioIdTextBox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="usuarioIdRegularExpressionValidator" runat="server" ErrorMessage="Solo Números" ControlToValidate="usuarioIdTextBox" ValidationExpression="^[0-9]*$" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label10" runat="server" class="text-info" Text="Fecha"></asp:Label>
+                                    <asp:TextBox class="form-control" ID="FechaTextBox" type="date" runat="server"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                      
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label2" runat="server" class="text-info" Text="Nombre"></asp:Label>
+                                    <asp:TextBox class="form-control" type="text" ID="NombresTextBox" placeholder="Nombre" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="nombreRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="NombresTextBox" Display="Dynamic" ForeColor="Red" SetFocusOnError="True" ToolTip="Campo Descripcion obligatorio&quot;&gt;Por favor llenar el campo Nombre">*</asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="nombreRegularExpressionValidator" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombresTextBox" ValidationExpression="(^[a-zA-Z'.\s]{1,20}$)" SetFocusOnError="True" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label8" runat="server" class="text-info" Text="UserName"></asp:Label>
+                                    <asp:TextBox class="form-control" type="text" ID="UsuarioTextBox" placeholder="UserName" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="usernameRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="UsuarioTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                      
+                      
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label4" runat="server" class="text-info" Text="Email"></asp:Label>
+                                    <asp:TextBox class="form-control" type="email" ID="EmailTextBox" placeholder="micorreo@gmail.com" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="emailRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="EmailTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label5" runat="server" class="text-info" Text="Contraseña"></asp:Label>
+                                    <asp:TextBox class="form-control" ID="ClaveTextBox" type="password" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="passwordRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="ClaveTextBox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                    <asp:CompareValidator ID="passwordCompareValidator" runat="server" ErrorMessage="Las contraseñas no coinciden" ControlToCompare="ConfirmarTextBox" ControlToValidate="ClaveTextBox" Display="Dynamic" ForeColor="Red" SetFocusOnError="True" ValidationGroup="Guardar"></asp:CompareValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="container">
+                                <div class="form-group">
+                                    <asp:Label ID="Label6" runat="server" class="text-info" Text="Confirmar Contraseña"></asp:Label>
+                                    <asp:TextBox class="form-control" ID="ConfirmarTextBox" type="password" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="cpasswordRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="ConfirmarTextBox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                    <asp:CompareValidator ID="cpasswordCompareValidator" runat="server" ErrorMessage="Las contraseñas no coinciden" ControlToCompare="ClaveTextBox" ControlToValidate="ConfirmarTextBox" Display="Dynamic" ForeColor="Red" SetFocusOnError="True" ValidationGroup="Guardar"></asp:CompareValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <br>                    
+                        <asp:Label ID="ErrorLabel" runat="server" Text=""></asp:Label>
+                        <asp:ValidationSummary ID="ValidationSummary" runat="server" />
+                        <div class="panel-footer">
+                            <div class="text-center">
+                                <div class="form-group" style="display: inline-block">
+                                    <asp:Button Text="Nuevo" class="btn btn-primary" runat="server" ID="nuevoButton" OnClick="nuevoButton_Click" />
+                                    <asp:Button Text="Guardar" class="btn btn-success" runat="server" ID="guadarButton" OnClick="guardarButton_Click" />
+                                    <asp:Button Text="Eliminar" class="btn btn-danger" runat="server" ID="eliminarButton" OnClick="eliminarButton_Click" />
+                                </div>
+                            </div>
+                        </div>
 
-     <div class="content">
-  <div id="Datos">
-      
-                <asp:Button ID="buscarButton" runat="server" Text="BUSCAR" class="btn btn-dark btn-lg text-center my-3 float-right" onclick="buscarButton_Click" />
-                  <br />
-                <asp:Label ID="Label1" runat="server" Text="ID"></asp:Label> 
-                <asp:TextBox class="form-control" ID="id" runat="server" type="number" min="0" onkeypress="return isNumberKey(event)"></asp:TextBox>
-
-                <asp:Label ID="Label2" runat="server" Text="Nombres"></asp:Label>
-                <asp:TextBox class="form-control" ID="nombres" placeholder="Nombres" runat="server" onkeypress="return isLetterKey(event)"></asp:TextBox>
-
-                <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
-                <asp:TextBox class="form-control" ID="email" placeholder="ejemplo@email.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{1,5})$" runat="server"></asp:TextBox>
-
-                <asp:Label ID="Label4" runat="server" Text="Usuario"></asp:Label>
-                <asp:TextBox class="form-control" ID="usuario" placeholder="Usuario" runat="server" onkeypress="if (event.keyCode == 32) event.returnValue = false"></asp:TextBox>
-
-                <asp:Label ID="Label5" runat="server" Text="Clave"></asp:Label>
-                <asp:TextBox class="form-control" ID="clave" placeholder="Clave" runat="server" type="password"></asp:TextBox>
-
-                <asp:Label ID="Label6" runat="server" Text="Confirmar"></asp:Label>
-                <asp:TextBox class="form-control" ID="confirmar" placeholder="Confirmar clave" runat="server" type="password"></asp:TextBox>
-
-                <asp:Label ID="Label7" runat="server" Text="Fecha"></asp:Label>
-                <asp:TextBox class="form-control" ID="fecha" type="date" runat="server" ></asp:TextBox>
-
-              
-                <asp:Button ID="nuevoButton" runat="server" Text="NUEVO" class="btn btn-dark btn-lg text-center my-3" OnClick="nuevoButton_Click" />
-                <asp:Button ID="guardarButton" runat="server" Text="GUARDAR" class="btn btn-dark btn-lg text-center my-3" OnClick="guardarButton_Click"/>
-                <asp:Button ID="eliminarButton" runat="server" Text="ELIMINAR" class="btn btn-dark btn-lg text-center my-3" OnClick="eliminarButton_Click"/>
-
+                    </form>
+                </article>
+            </div>
+            <!-- card.// -->
     </div>
-</div>
-
+    <br>
 </asp:Content>

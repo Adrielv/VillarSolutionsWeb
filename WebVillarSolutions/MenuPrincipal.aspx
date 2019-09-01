@@ -40,11 +40,11 @@
       <li class="active"><a href="index.html">Home</a></li>
       <li><a class="drop" href="#">Registros</a>
         <ul>
-          <li><a href="pages/gallery.html">Usuario</a></li>
-          <li><a href="pages/full-width.html">Cliente</a></li>     
-          <li><a href="pages/sidebar-left.html">Proveedor</a></li>
-          <li><a href="pages/sidebar-right.html">Producto</a></li>
-          <li><a href="pages/basic-grid.html">Pedido</a></li>
+          <li><a href="Registros/rUsuarios.aspx">Usuarios</a></li>
+          <li><a href="Registros/rCliente.aspx">Clientes</a></li>     
+          <li><a href="Registros/rProveedores.aspx">Proveedores</a></li>
+          <li><a href="Registros/rProductos.aspx">Productos</a></li>
+         
         </ul>
       </li>
       <li><a class="drop" href="#">Consultas</a>
@@ -56,13 +56,11 @@
               <li><a href="pages/basic-grid.html">Pedido</a></li>
             </ul>
          
-          <li><a href="#">Level 2</a></li>
+          <li><a href="#">About</a></li>
        
       </li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Link Text</a></li>
-      <li><a href="#">Long Link Text</a></li>
+      <li><a href="#">Archivo</a></li>
+   
     </ul>
     <!-- ################################################################################################ -->
   </nav>

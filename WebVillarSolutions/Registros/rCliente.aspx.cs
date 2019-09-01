@@ -76,7 +76,7 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(cedula.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(fecha.Text))
+            if ( string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(cedula.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(fecha.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                 paso = false;

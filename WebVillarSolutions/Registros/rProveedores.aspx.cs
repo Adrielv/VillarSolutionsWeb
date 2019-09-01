@@ -74,7 +74,7 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(fecha.Text))
+            if (string.IsNullOrWhiteSpace(nombres.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(fecha.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                 paso = false;
@@ -172,14 +172,14 @@ namespace WebVillarSolutions.Registros
 
             bool paso = false;
             if (!Validar())
-                return;
+               return;
 
             i = LlenaClase();
             int.TryParse(id.Text, out int idx);
             if (idx == 0)
             {
                 if (!ValidarRepetir())
-                    return;
+                   return;
 
                 paso = Repositorio.Guardar(i);
                 Limpiar();

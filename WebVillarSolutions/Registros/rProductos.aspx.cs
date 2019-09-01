@@ -80,7 +80,7 @@ namespace WebVillarSolutions.Registros
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(descripcion.Text) || string.IsNullOrWhiteSpace(precio.Text) || string.IsNullOrWhiteSpace(costo.Text) || Convert.ToDecimal(costo.Text) > Convert.ToDecimal(precio.Text))
+            if ( string.IsNullOrWhiteSpace(descripcion.Text) || string.IsNullOrWhiteSpace(precio.Text) || string.IsNullOrWhiteSpace(costo.Text) || Convert.ToDecimal(costo.Text) > Convert.ToDecimal(precio.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "Validacion()", true);
                 paso = false;
@@ -131,7 +131,7 @@ namespace WebVillarSolutions.Registros
             if (idx == 0)
             {
                 if (!ValidarRepetir())
-                    return;
+                   return;
 
                 paso = Repositorio.Guardar(i);
                 Limpiar();

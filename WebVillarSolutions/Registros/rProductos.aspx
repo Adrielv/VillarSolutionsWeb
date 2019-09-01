@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <div class="content">
             <div id="Datos">
+                <p style="color:#000000;text-align:center; font-size:larger">REGISTRO DE PRODUCTOS</p>
+
                   <asp:Button ID="buscarButton" runat="server" Text="BUSCAR" class="btn btn-dark btn-lg text-center my-3 float-right" onclick="buscarButton_Click" />
               <br />
                 <asp:Label ID="Label1" runat="server" Text="ProductoId"></asp:Label>
@@ -12,10 +14,10 @@
           
                
                 <asp:Label ID="Label2" runat="server" Text="Descripcion"></asp:Label>
-                <asp:TextBox class="form-control" ID="descripcion" runat="server" placeholder="Nombre"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="descripcion" runat="server"></asp:TextBox>
 
                 <asp:Label ID="Label3" runat="server" Text="Cantidad"></asp:Label>
-                <asp:TextBox class="form-control" ID="cantidad" runat="server" ReadOnly="true"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="cantidad" runat="server" ></asp:TextBox>
 
                
                 <asp:Label ID="Label4" runat="server" Text="Precio"></asp:Label>
