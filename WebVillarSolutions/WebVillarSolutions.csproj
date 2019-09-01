@@ -75,7 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Consultas\cUsuarios.aspx" />
+    <Content Include="Consultas\cUsuarios1.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -126,7 +126,6 @@
     <Content Include="Registros\rProductos.aspx" />
     <Content Include="Registros\rProveedores.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
-    <Content Include="Registros\rUsuarios1.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -178,12 +177,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\cUsuarios.aspx.cs">
-      <DependentUpon>cUsuarios.aspx</DependentUpon>
+    <Compile Include="Consultas\cUsuarios1.aspx.cs">
+      <DependentUpon>cUsuarios1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\cUsuarios.aspx.designer.cs">
-      <DependentUpon>cUsuarios.aspx</DependentUpon>
+    <Compile Include="Consultas\cUsuarios1.aspx.designer.cs">
+      <DependentUpon>cUsuarios1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -231,13 +230,7 @@
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registros\rUsuarios1.aspx.cs">
-      <DependentUpon>rUsuarios1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\rUsuarios1.aspx.designer.cs">
-      <DependentUpon>rUsuarios1.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPag.Master" />

@@ -10,10 +10,10 @@
                 <div class="card-header text-uppercase text-center text-info"> Registro Usuario</div>
                 <article class="card-body">
                     <form>
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="container ">
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" class="text-info" Text="UsuarioId"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" class="text-info text-center" Text="UsuarioId"></asp:Label>
                                     <asp:Button class="btn btn-info" ID="BuscarButton" runat="server" Text="Buscar" OnClick="buscarButton_Click" />
                                     <asp:TextBox class="form-control" type="number" ID="UsuarioIdTextBox" Text="0" runat="server" ValidationGroup="Guardar"></asp:TextBox>
                                    <asp:RequiredFieldValidator ID="usuarioIdRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="usuarioIdTextBox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -21,9 +21,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
-                                <div class="form-group">
+                        <div class="col-md-12 col-md-offset-3 ">
+                            <div class="container ">
+                                <div class="form-group ">
                                     <asp:Label ID="Label10" runat="server" class="text-info" Text="Fecha"></asp:Label>
                                     <asp:TextBox class="form-control" ID="FechaTextBox" type="date" runat="server"></asp:TextBox>
                                 </div>
@@ -31,8 +31,8 @@
                         </div>
                         <br>
                       
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="container ">
                                 <div class="form-group">
                                     <asp:Label ID="Label2" runat="server" class="text-info" Text="Nombre"></asp:Label>
                                     <asp:TextBox class="form-control" type="text" ID="NombresTextBox" placeholder="Nombre" runat="server"></asp:TextBox>
@@ -41,11 +41,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
-                                <div class="form-group">
-                                    <asp:Label ID="Label8" runat="server" class="text-info" Text="UserName"></asp:Label>
-                                    <asp:TextBox class="form-control" type="text" ID="UsuarioTextBox" placeholder="UserName" runat="server"></asp:TextBox>
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="container ">
+                                <div class="form-group ">
+                                    <asp:Label ID="Label8" runat="server" class="text-info" Text="Usuario"></asp:Label>
+                                    <asp:TextBox class="form-control " type="text" ID="UsuarioTextBox" placeholder="Usuario" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="usernameRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="UsuarioTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -53,17 +53,17 @@
                         <br>
                       
                       
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="container ">
                                 <div class="form-group">
                                     <asp:Label ID="Label4" runat="server" class="text-info" Text="Email"></asp:Label>
-                                    <asp:TextBox class="form-control" type="email" ID="EmailTextBox" placeholder="micorreo@gmail.com" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" type="email" ID="EmailTextBox" placeholder="Adriel@gmail.com" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="emailRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="EmailTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         </div>
                         <br>
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-12 col-md-offset-3">
                             <div class="container">
                                 <div class="form-group">
                                     <asp:Label ID="Label5" runat="server" class="text-info" Text="Contraseña"></asp:Label>
@@ -74,8 +74,8 @@
                             </div>
                         </div>
                         <br>
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
+                        <div class="col-md-12 col-md-offset-3">
+                            <div class="container ">
                                 <div class="form-group">
                                     <asp:Label ID="Label6" runat="server" class="text-info" Text="Confirmar Contraseña"></asp:Label>
                                     <asp:TextBox class="form-control" ID="ConfirmarTextBox" type="password" runat="server"></asp:TextBox>

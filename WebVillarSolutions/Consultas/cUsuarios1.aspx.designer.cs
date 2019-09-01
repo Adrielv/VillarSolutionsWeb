@@ -10,7 +10,7 @@
 namespace WebVillarSolutions.Consultas {
     
     
-    public partial class cUsuarios {
+    public partial class cUsuarios1 {
         
         /// <summary>
         /// FiltroDropDownList control.
@@ -67,12 +67,12 @@ namespace WebVillarSolutions.Consultas {
         protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
         
         /// <summary>
-        /// UsuarioGridView control.
+        /// UsuarioGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView UsuarioGridView;
+        protected global::System.Web.UI.WebControls.GridView UsuarioGrid;
     }
 }

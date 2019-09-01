@@ -36,7 +36,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/Registros/UsuarioWF.aspx">Usuarios</a>
+                                <a class="dropdown-item" href="/Registros/rUsuarios.aspx">Usuarios</a>
                                 
                             </div>
                         </li>
@@ -44,7 +44,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/Consultas/CUsuarioWF.aspx">Usuarios</a>
+                                <a class="dropdown-item" href="/Consultas/cUsuarios1.aspx">Usuarios</a>
                                
                             </div>
                         </li>
