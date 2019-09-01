@@ -14,7 +14,7 @@
                             <div class="container ">
                                 <div class="form-group">
                                     <asp:Label ID="Label1" runat="server" class="text-info text-center" Text="UsuarioId"></asp:Label>
-                                    <asp:Button class="btn btn-info" ID="BuscarButton" runat="server" Text="Buscar" OnClick="buscarButton_Click" />
+                                    <asp:Button class="btn btn-info" CausesValidation ="False" ID="BuscarButton" runat="server" Text="Buscar" OnClick="buscarButton_Click" />
                                     <asp:TextBox class="form-control" type="number" ID="UsuarioIdTextBox" Text="0" runat="server" ValidationGroup="Guardar"></asp:TextBox>
                                    <asp:RequiredFieldValidator ID="usuarioIdRequiredFieldValidator" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="usuarioIdTextBox" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="usuarioIdRegularExpressionValidator" runat="server" ErrorMessage="Solo Números" ControlToValidate="usuarioIdTextBox" ValidationExpression="^[0-9]*$" ValidationGroup="Guardar"></asp:RegularExpressionValidator>
